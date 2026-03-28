@@ -1,0 +1,14 @@
+{
+  "name": "mediador-functions",
+  "description": "Firebase Functions para medIAdor conectadas a Gemini AI",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0",
+    "@google/generative-ai": "^0.21.0"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "private": true
+}

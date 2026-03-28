@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>medIAdor - Transforma tu queja en un reclamo profesional</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#433b56",
+              "on-primary": "#f8f7ff",
+              "inverse-surface": "#060e20",
+              "secondary-fixed": "#d5e3fc",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed": "#003798",
+              "secondary-container": "#d5e3fc",
+              "on-secondary": "#f8f8ff",
+              "on-primary-container": "#0047c0",
+              "surface-variant": "#d9e2ff",
+              "outline-variant": "#98b1f2",
+              "on-error": "#fff7f7",
+              "secondary-fixed-dim": "#c7d5ed",
+              "on-surface": "#113069",
+              "background": "#faf8ff",
+              "on-secondary-fixed": "#324053",
+              "surface-bright": "#faf8ff",
+              "error-container": "#ff8b9a",
+              "primary-fixed": "#dbe1ff",
+              "primary-container": "#dbe1ff",
+              "surface-container": "#eaedff",
+              "outline": "#6079b7",
+              "primary": "#0052dc",
+              "on-primary-fixed-variant": "#0050d5",
+              "on-secondary-fixed-variant": "#4e5c71",
+              "surface": "#faf8ff",
+              "error": "#9e3f4e",
+              "tertiary-fixed": "#e9ddff",
+              "error-dim": "#4f0116",
+              "on-tertiary": "#fdf7ff",
+              "on-secondary-container": "#455367",
+              "secondary": "#526074",
+              "surface-container-highest": "#d9e2ff",
+              "primary-dim": "#0048c2",
+              "on-error-container": "#782232",
+              "secondary-dim": "#465468",
+              "on-surface-variant": "#445d99",
+              "tertiary-dim": "#574f6a",
+              "surface-container-low": "#f2f3ff",
+              "on-tertiary-container": "#554e69",
+              "primary-fixed-dim": "#c8d3ff",
+              "surface-dim": "#cdd9ff",
+              "on-tertiary-fixed-variant": "#5f5773",
+              "surface-container-high": "#e2e7ff",
+              "tertiary": "#635b77",
+              "tertiary-container": "#e9ddff",
+              "inverse-primary": "#618bff",
+              "surface-tint": "#0052dc",
+              "on-background": "#113069",
+              "tertiary-fixed-dim": "#dacff0",
+              "inverse-on-surface": "#959cb5"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .tonal-depth {
+            background-color: #f2f3ff;
+        }
+        .no-line {
+            border: none !important;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md no-line tonal-depth">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-blue-900 dark:text-blue-100">medIAdor</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#como-funciona">Cómo funciona</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#beneficios">Beneficios</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#ejemplos">Ejemplos</a>
+<a class="bg-primary text-on-primary px-5 py-2 rounded-xl font-semibold shadow-sm hover:scale-95 transition-transform duration-150" href="#generar">Generar reclamo</a>
+</div>
+<button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-6 py-20 md:py-32 overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<h1 class="text-5xl md:text-7xl font-black text-on-surface tracking-tight leading-[1.1] mb-6">
+                        Transformá tu queja en un <span class="text-primary">reclamo</span> que sí responden
+                    </h1>
+<p class="text-xl md:text-2xl text-on-surface-variant mb-10 max-w-lg leading-relaxed">
+                        Más claro. Más serio. Más difícil de ignorar. Convertimos tu frustración en un documento legalmente estructurado.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="inline-flex items-center justify-center bg-gradient-to-br from-primary to-primary-dim text-on-primary px-8 py-4 rounded-xl text-lg font-bold shadow-lg hover:opacity-90 transition-all" href="#generar">
+                            Generar reclamo
+                        </a>
+<a class="inline-flex items-center justify-center bg-surface-container-high text-on-primary-container px-8 py-4 rounded-xl text-lg font-semibold hover:bg-surface-variant transition-all" href="#como-funciona">
+                            Ver cómo funciona
+                        </a>
+</div>
+</div>
+<div class="relative lg:block hidden">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-primary-container/30 rounded-full blur-3xl"></div>
+<div class="bg-surface-container-lowest border border-outline-variant/20 p-8 rounded-2xl shadow-2xl relative z-10">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-3 h-3 rounded-full bg-error/40"></div>
+<div class="w-3 h-3 rounded-full bg-secondary-container"></div>
+<div class="w-3 h-3 rounded-full bg-primary/40"></div>
+</div>
+<div class="space-y-4">
+<div class="h-4 bg-surface-container rounded w-3/4"></div>
+<div class="h-4 bg-surface-container rounded w-full"></div>
+<div class="h-4 bg-surface-container rounded w-5/6"></div>
+<div class="pt-4 border-t border-outline-variant/10">
+<div class="h-32 bg-primary-container/10 rounded-xl flex items-center justify-center border-2 border-dashed border-primary/20">
+<span class="text-primary font-medium">Analizando reclamo...</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cómo Funciona Section -->
+<section class="py-24 bg-surface-container-low" id="como-funciona">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16">
+<span class="text-sm font-bold tracking-widest text-primary uppercase">Proceso</span>
+<h2 class="text-4xl font-black text-on-surface mt-2">Cómo funciona medIAdor</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Step 1 -->
+<div class="group p-8 rounded-2xl bg-surface-container-lowest transition-all hover:translate-y-[-4px]">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined font-bold">chat_bubble</span>
+</div>
+<h3 class="text-xl font-bold mb-4">1. Contás tu problema</h3>
+<p class="text-on-surface-variant leading-relaxed">No importa el orden o las palabras. Explicá lo que pasó de forma natural, nosotros nos encargamos del resto.</p>
+</div>
+<!-- Step 2 -->
+<div class="group p-8 rounded-2xl bg-surface-container-lowest transition-all hover:translate-y-[-4px]">
+<div class="w-12 h-12 bg-tertiary/10 rounded-xl flex items-center justify-center text-tertiary mb-6">
+<span class="material-symbols-outlined font-bold">architecture</span>
+</div>
+<h3 class="text-xl font-bold mb-4">2. La IA lo estructura</h3>
+<p class="text-on-surface-variant leading-relaxed">Nuestra IA identifica los puntos clave, el marco legal sugerido y organiza los hechos cronológicamente.</p>
+</div>
+<!-- Step 3 -->
+<div class="group p-8 rounded-2xl bg-surface-container-lowest transition-all hover:translate-y-[-4px]">
+<div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center text-secondary mb-6">
+<span class="material-symbols-outlined font-bold">send</span>
+</div>
+<h3 class="text-xl font-bold mb-4">3. Enviás un reclamo profesional</h3>
+<p class="text-on-surface-variant leading-relaxed">Recibís un texto listo para copiar, enviar por email o presentar físicamente con el tono adecuado.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Beneficios Section -->
+<section class="py-24 bg-surface" id="beneficios">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-4xl font-black text-on-surface mb-8 leading-tight">Por qué usar una estructura profesional aumenta tu éxito</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="shrink-0 w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Más claridad</h4>
+<p class="text-on-surface-variant">Evita malentendidos. Un reclamo bien estructurado facilita la tarea de quien debe darte una respuesta.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Más seriedad</h4>
+<p class="text-on-surface-variant">El tono formal indica que conocés tus derechos y que estás dispuesto a seguir las vías correspondientes.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Más probabilidad de respuesta</h4>
+<p class="text-on-surface-variant">Las empresas priorizan reclamos que presentan hechos claros y pedidos concretos sobre quejas emocionales.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-high h-64 rounded-2xl flex flex-col justify-end p-6 group">
+<div class="text-4xl font-black text-primary/30 group-hover:text-primary transition-colors">85%</div>
+<div class="text-sm font-bold uppercase tracking-wider mt-2">Efectividad</div>
+</div>
+<div class="bg-surface-container-highest h-64 rounded-2xl flex flex-col justify-end p-6 translate-y-8">
+<div class="text-4xl font-black text-on-surface/30 group-hover:text-on-surface transition-colors">2min</div>
+<div class="text-sm font-bold uppercase tracking-wider mt-2">Tiempo medio</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ejemplo de output Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden" id="ejemplos">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-black text-on-surface">Resultados que marcan la diferencia</h2>
+<p class="text-on-surface-variant mt-4 text-lg">De un párrafo desordenado a un documento formal.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+<!-- Document Preview -->
+<div class="bg-white rounded-xl shadow-xl p-10 font-serif border-t-8 border-primary relative">
+<div class="absolute top-4 right-6 text-on-surface-variant/20 italic font-sans text-sm">Previsualización de Documento</div>
+<div class="mb-10">
+<p class="text-right mb-8">Ciudad Autónoma de Buenos Aires, 24 de Mayo de 2024</p>
+<p class="font-bold mb-2">A la atención del Departamento de Atención al Cliente</p>
+<p class="font-bold">EMPRESA DE TELECOMUNICACIONES S.A.</p>
+</div>
+<div class="space-y-4 text-justify leading-relaxed">
+<p class="font-bold underline">REF: RECLAMO FORMAL POR INCUMPLIMIENTO DE SERVICIO</p>
+<p>De mi mayor consideración:</p>
+<p>Por la presente, me dirijo a usted con el fin de formalizar un reclamo respecto al servicio contratado bajo el número de cliente 449203, debido a la interrupción injustificada del suministro de internet desde el pasado 12 de mayo...</p>
+<p>Esta situación constituye una falta grave a los términos y condiciones acordados, así como una vulneración a mis derechos como consumidor. Solicito se proceda a la reparación inmediata y al reintegro proporcional de la tarifa...</p>
+</div>
+<div class="mt-12 pt-8 border-t border-outline-variant/20 flex justify-between items-center font-sans">
+<div class="text-sm text-on-surface-variant">Firma del remitente</div>
+<div class="w-32 h-1 bg-on-surface/10 rounded"></div>
+</div>
+</div>
+<!-- Email Preview -->
+<div class="bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant/20 overflow-hidden">
+<div class="bg-surface-container px-6 py-3 flex items-center gap-3 border-b border-outline-variant/20">
+<div class="w-3 h-3 rounded-full bg-error-container"></div>
+<div class="text-sm font-medium text-on-surface-variant">Nuevo Mensaje</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant w-16 text-sm">Para:</span>
+<span class="text-sm">reclamos@empresa.com</span>
+</div>
+<div class="flex border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant w-16 text-sm">Asunto:</span>
+<span class="text-sm font-bold">RECLAMO FORMAL - Juan Pérez - Cliente #449203</span>
+</div>
+<div class="pt-4 text-sm leading-loose">
+<p>Estimados,</p>
+<p>Adjunto a la presente envío reclamo formal detallando las irregularidades presentadas en el servicio durante la última semana.</p>
+<p>Quedo a la espera de una respuesta favorable en un plazo no mayor a 48 horas hábiles para evitar el inicio de actuaciones administrativas ante los organismos de control competentes.</p>
+<p>Atentamente,<br/>Juan Pérez</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Form Section -->
+<section class="py-24 bg-surface" id="generar">
+<div class="max-w-4xl mx-auto px-6">
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-3xl p-8 md:p-12 shadow-2xl relative">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-lg border-4 border-surface">
+<span class="material-symbols-outlined text-4xl">edit_note</span>
+</div>
+<div class="text-center mb-12 mt-4">
+<h2 class="text-3xl font-black text-on-surface">Generá tu reclamo ahora</h2>
+<p class="text-on-surface-variant">Completá los datos y nuestra IA redactará el documento por vos.</p>
+</div>
+<form class="space-y-6" id="claim-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-bold text-on-surface-variant uppercase tracking-wider mb-2">Nombre</label>
+<input class="w-full bg-surface-container-low border-outline-variant/20 rounded-xl p-4 focus:ring-primary focus:border-primary" id="nombre" placeholder="Ej: Juan Pérez" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold text-on-surface-variant uppercase tracking-wider mb-2">Email</label>
+<input class="w-full bg-surface-container-low border-outline-variant/20 rounded-xl p-4 focus:ring-primary focus:border-primary" id="email" placeholder="tu@email.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-bold text-on-surface-variant uppercase tracking-wider mb-2">Empresa</label>
+<input class="w-full bg-surface-container-low border-outline-variant/20 rounded-xl p-4 focus:ring-primary focus:border-primary" id="empresa" placeholder="Nombre de la empresa" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-bold text-on-surface-variant uppercase tracking-wider mb-2">Producto o servicio</label>
+<input class="w-full bg-surface-container-low border-outline-variant/20 rounded-xl p-4 focus:ring-primary focus:border-primary" id="producto" placeholder="Ej: Internet, Laptop..." type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold text-on-surface-variant uppercase tracking-wider mb-2">Descripción del problema</label>
+<textarea class="w-full bg-surface-container-low border-outline-variant/20 rounded-xl p-4 focus:ring-primary focus:border-primary" id="descripcion" placeholder="Contanos qué pasó con tus palabras..." rows="6"></textarea>
+</div>
+<div class="flex items-start gap-3">
+<input class="mt-1 rounded border-outline-variant/40 text-primary focus:ring-primary" id="consent" type="checkbox"/>
+<label class="text-sm text-on-surface-variant" for="consent">Doy mi consentimiento para el uso anónimo de esta información.</label>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-dim text-on-primary py-5 rounded-xl text-xl font-bold shadow-xl hover:opacity-90 active:scale-[0.98] transition-all" id="btn-submit" type="button">
+                            Generar reclamo
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Results Area -->
+<section class="py-24 bg-surface-container-low" id="resultados">
+<div class="max-w-5xl mx-auto px-6">
+<!-- Loading State -->
+<div class="mb-12 hidden" id="loading-indicator">
+<div class="flex justify-between items-end mb-2">
+<span class="text-lg font-bold text-primary">Generando tu reclamo...</span>
+<span class="text-sm text-on-surface-variant">80% completado</span>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-[2500ms]" id="progress-bar" style="width: 0%"></div>
+</div>
+</div>
+<div class="space-y-8 hidden" id="results-display">
+<!-- Block 1: Reclamo estructurado -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/20 shadow-sm group">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold">Reclamo estructurado</h3>
+<button class="flex items-center gap-2 text-primary font-bold text-sm hover:bg-primary-container px-3 py-1.5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+                                Copiar
+                            </button>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl text-on-surface-variant font-mono text-sm leading-relaxed whitespace-pre-wrap" id="output-reclamo">
+                            [FECHA]<br/><br/>
+                            A la empresa [EMPRESA]<br/>
+                            Ref: [PRODUCTO O SERVICIO]<br/><br/>
+                            Por medio de la presente, yo [NOMBRE] interpongo reclamo formal por...
+                        </div>
+</div>
+<!-- Block 2: Email -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/20 shadow-sm group">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold">Email</h3>
+<button class="flex items-center gap-2 text-primary font-bold text-sm hover:bg-primary-container px-3 py-1.5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+                                Copiar
+                            </button>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl text-on-surface-variant font-mono text-sm leading-relaxed whitespace-pre-wrap" id="output-email">
+                            Asunto: Reclamo Formal - [NOMBRE] - [PRODUCTO]<br/><br/>
+                            Estimados,<br/><br/>
+                            Les escribo para hacerles llegar el reclamo adjunto...
+                        </div>
+</div>
+<!-- Block 3: Sugerencia -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/20 shadow-sm group">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold">Sugerencia</h3>
+<button class="flex items-center gap-2 text-primary font-bold text-sm hover:bg-primary-container px-3 py-1.5 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+                                Copiar
+                            </button>
+</div>
+<div class="p-6 bg-tertiary-container/30 border border-tertiary/20 rounded-xl text-on-tertiary-container italic" id="output-sugerencia">
+                            Te sugerimos enviar este reclamo por un canal con acuse de recibo y guardar el número de gestión que te proporcionen para futuras instancias legales.
+                        </div>
+</div>
+<!-- Block 4: Análisis de Fundamento -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant/20 shadow-sm group">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold">Análisis de Fundamento</h3>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl text-on-surface-variant font-medium text-sm leading-relaxed">
+    <div class="mb-2">Tipo de situación: <strong id="output-tipo" class="uppercase text-tertiary"></strong></div>
+    Nivel de solidez: <strong id="output-nivel" class="uppercase text-primary"></strong><br/><br/>
+    <span id="output-explicacion" class="italic block mb-4"></span>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 border-t border-outline-variant/20 pt-4 mt-2">
+        <div id="contenedor-presentes" class="hidden text-on-surface-variant">
+            <h4 class="font-bold mb-2 flex items-center gap-2 text-primary">
+                <span class="material-symbols-outlined text-base">check_circle</span>
+                Elementos presentes
+            </h4>
+            <ul id="output-presentes" class="list-disc pl-5 space-y-1"></ul>
+        </div>
+        <div id="contenedor-faltantes" class="hidden text-on-surface-variant">
+            <h4 class="font-bold mb-2 flex items-center gap-2 text-error">
+                <span class="material-symbols-outlined text-base">warning</span>
+                Elementos faltantes
+            </h4>
+            <ul id="output-faltantes" class="list-disc pl-5 space-y-1"></ul>
+        </div>
+    </div>
+
+    <div id="contenedor-mejoras" class="hidden border-t border-outline-variant/20 pt-4 mt-4">
+        <h4 class="font-bold text-on-surface mb-2 flex items-center gap-2">
+            <span class="material-symbols-outlined text-base text-primary">lightbulb</span>
+            Cómo mejorar este reclamo
+        </h4>
+        <ul id="output-mejoras" class="list-disc pl-5 space-y-2 text-on-surface-variant"></ul>
+    </div>
+</div>
+</div>
+<div class="pt-8 flex justify-center">
+<button class="bg-on-surface text-surface py-4 px-12 rounded-full font-black text-lg shadow-xl hover:scale-105 active:scale-95 transition-transform">
+                            Copiar todo
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 px-6 border-t border-slate-200/20 dark:border-slate-800/20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto">
+<div class="text-lg font-bold text-blue-900 dark:text-blue-100">medIAdor</div>
+<p class="text-sm font-inter text-slate-500 dark:text-slate-400">© 2024 medIAdor. Transformando reclamos en soluciones.</p>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-blue-600 transition-colors" href="#">Términos</a>
+<a class="text-slate-500 hover:text-blue-600 transition-colors" href="#">Privacidad</a>
+</div>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const btnSubmit = document.getElementById('btn-submit');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        const resultsDisplay = document.getElementById('results-display');
+        const progressBar = document.getElementById('progress-bar');
+        
+        btnSubmit.addEventListener('click', async function() {
+            // 1. Get user input
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const empresa = document.getElementById('empresa').value;
+            const producto = document.getElementById('producto').value;
+            const descripcion = document.getElementById('descripcion').value;
+
+            if (!nombre || !email || !empresa || !producto || !descripcion) {
+                alert('Por favor, completá todos los campos para generar el reclamo.');
+                return;
+            }
+
+            // UI changes
+            resultsDisplay.classList.add('hidden');
+            loadingIndicator.classList.remove('hidden');
+            progressBar.style.width = '0%';
+            loadingIndicator.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Fake progress animation
+            progressBar.style.transition = 'width 8s ease-out';
+            setTimeout(() => {
+                progressBar.style.width = '85%';
+            }, 50);
+
+            try {
+                const supUrl = "https://iotwfvkriwtampqmnroq.supabase.co/functions/v1/procesar-reclamo";
+                const payload = { nombre, email, empresa, producto, descripcion };
+
+                const response = await fetch(supUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    let errMessage = 'Error al procesar el reclamo en el servidor.';
+                    try {
+                        const errData = await response.json();
+                        if (errData.error) errMessage = errData.error;
+                    } catch(e) {}
+                    throw new Error(errMessage);
+                }
+
+                const aiResult = await response.json();
+
+                // Speed up bar to 100%
+                progressBar.style.transition = 'width 0.3s ease-in-out';
+                progressBar.style.width = '100%';
+
+                // Fill DOM
+                document.getElementById('output-reclamo').innerText = aiResult.reclamo;
+                document.getElementById('output-email').innerText = (aiResult.email && typeof aiResult.email === 'object') ? 
+                    `Asunto: ${aiResult.email.asunto}\n\n${aiResult.email.cuerpo}` : aiResult.email;
+                document.getElementById('output-sugerencia').innerHTML = aiResult.sugerencia_escalada || aiResult.sugerencia || '';
+                
+                document.getElementById('output-tipo').innerText = (aiResult.tipo_situacion || '').replace(/_/g, ' ');
+                document.getElementById('output-nivel').innerText = aiResult.nivel_fundamento || '';
+                document.getElementById('output-explicacion').innerText = aiResult.explicacion_fundamento || '';
+
+                // List helpers
+                const renderList = (idContainer, idOutput, data) => {
+                    const cont = document.getElementById(idContainer);
+                    const out = document.getElementById(idOutput);
+                    if (data && Array.isArray(data) && data.length > 0) {
+                        out.innerHTML = data.map(m => `<li>${m}</li>`).join('');
+                        cont.classList.remove('hidden');
+                    } else if (data && typeof data === 'string' && data.trim() !== '') {
+                        out.innerHTML = `<li>${data}</li>`;
+                        cont.classList.remove('hidden');
+                    } else {
+                        cont.classList.add('hidden');
+                    }
+                };
+
+                renderList('contenedor-presentes', 'output-presentes', aiResult.elementos_presentes);
+                renderList('contenedor-faltantes', 'output-faltantes', aiResult.elementos_faltantes);
+                renderList('contenedor-mejoras', 'output-mejoras', aiResult.mejoras_sugeridas);
+
+                // End loading and reveal
+                setTimeout(() => {
+                    loadingIndicator.classList.add('hidden');
+                    resultsDisplay.classList.remove('hidden');
+                    resultsDisplay.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 400);
+
+            } catch (error) {
+                progressBar.style.transition = 'width 0.3s ease-in-out';
+                progressBar.style.width = '0%';
+                alert('Hubo un error: ' + error.message);
+                loadingIndicator.classList.add('hidden');
+            }
+        });
+    });
+</script>
+</body></html>
