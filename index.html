@@ -5,8 +5,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>medIAdor - Transforma tu queja en un reclamo profesional</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -113,9 +113,13 @@
 <h1 class="text-5xl md:text-7xl font-black text-on-surface tracking-tight leading-[1.1] mb-6">
                         Transformá tu queja en un <span class="text-primary">reclamo</span> que sí responden
                     </h1>
-<p class="text-xl md:text-2xl text-on-surface-variant mb-10 max-w-lg leading-relaxed">
+<p class="text-xl md:text-2xl text-on-surface-variant mb-6 max-w-lg leading-relaxed">
                         Más claro. Más serio. Más difícil de ignorar. Convertimos tu frustración en un reclamo formal estructurado.
                     </p>
+                    <div class="mb-10 flex items-center gap-2 text-primary font-bold bg-primary/10 w-fit px-4 py-1.5 rounded-full">
+                        <span class="material-symbols-outlined text-sm">auto_awesome</span>
+                        Servicio 100% gratuito
+                    </div>
 <div class="flex flex-col sm:flex-row gap-4">
 <a class="inline-flex items-center justify-center bg-gradient-to-br from-primary to-primary-dim text-on-primary px-8 py-4 rounded-xl text-lg font-bold shadow-lg hover:opacity-90 transition-all" href="#generar">
                             Generar reclamo
@@ -223,9 +227,9 @@
 <div class="text-3xl font-black text-primary/30 group-hover:text-primary transition-colors leading-tight">Resultados claros</div>
 <div class="text-sm font-bold uppercase tracking-wider mt-2">Efectividad</div>
 </div>
-<div class="bg-surface-container-highest h-64 rounded-2xl flex flex-col justify-end p-6 translate-y-8">
+<div class="bg-surface-container-highest h-64 rounded-2xl flex flex-col justify-end p-6 translate-y-8 group">
 <div class="text-3xl font-black text-on-surface/30 group-hover:text-on-surface transition-colors leading-tight">En minutos</div>
-<div class="text-sm font-bold uppercase tracking-wider mt-2">Tiempo medio</div>
+<div class="text-sm font-bold uppercase tracking-wider mt-2">Rapidez</div>
 </div>
 </div>
 </div>
@@ -245,7 +249,7 @@
 <div class="mb-10">
 <p class="text-right mb-8">Montevideo, 24 de Octubre de 2026</p>
 <p class="font-bold mb-2">A la atención del Departamento de Atención al Cliente</p>
-<p class="font-bold">ANTEL</p>
+<p class="font-bold">TELECOM S.A.</p>
 </div>
 <div class="space-y-4 text-justify leading-relaxed">
 <p class="font-bold underline">REF: RECLAMO FORMAL POR INCUMPLIMIENTO DE SERVICIO</p>
@@ -267,7 +271,7 @@
 <div class="p-6 space-y-4">
 <div class="flex border-b border-outline-variant/10 pb-2">
 <span class="text-on-surface-variant w-16 text-sm">Para:</span>
-<span class="text-sm">reclamos@antel.com.uy</span>
+<span class="text-sm">reclamos@telecom.com.uy</span>
 </div>
 <div class="flex border-b border-outline-variant/10 pb-2">
 <span class="text-on-surface-variant w-16 text-sm">Asunto:</span>
@@ -318,7 +322,8 @@
 </div>
 <div>
 <label class="block text-sm font-bold text-on-surface-variant uppercase tracking-wider mb-2">Descripción del problema</label>
-<textarea class="w-full bg-surface-container-low border-outline-variant/20 rounded-xl p-4 focus:ring-primary focus:border-primary" id="descripcion" placeholder="Contanos qué pasó con tus palabras..." rows="6"></textarea>
+<textarea class="w-full bg-surface-container-low border-outline-variant/20 rounded-xl p-4 focus:ring-primary focus:border-primary" id="descripcion" placeholder="Contanos qué pasó. Cuanto más detallás, mejor será tu reclamo. Incluí: fecha del problema, qué contrataste, qué ocurrió exactamente, y si ya reclamaste antes." rows="6"></textarea>
+<p class="text-xs text-on-surface-variant mt-2 font-medium">Tip: con fecha, empresa, servicio y antecedentes obtenés un reclamo de nivel ALTO.</p>
 </div>
 <div class="flex items-start gap-3">
 <input class="mt-1 rounded border-outline-variant/40 text-primary focus:ring-primary" id="consent" type="checkbox"/>
@@ -459,9 +464,15 @@
             const empresa = document.getElementById('empresa').value;
             const producto = document.getElementById('producto').value;
             const descripcion = document.getElementById('descripcion').value;
+            const consent = document.getElementById('consent').checked;
 
             if (!nombre || !email || !empresa || !producto || !descripcion) {
                 alert('Por favor, completá todos los campos para generar el reclamo.');
+                return;
+            }
+
+            if (!consent) {
+                alert('Debes marcar la casilla para dar tu consentimiento sobre el uso anónimo de la información antes de continuar.');
                 return;
             }
 
